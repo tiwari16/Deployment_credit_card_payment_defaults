@@ -1,9 +1,9 @@
 # Deployment_credit_card_payment_defaults
 
-ML Production Pipeline with Python SDK v2 &amp; MLFlow in Azure
 
 
-# Azure Machine Learning Pipeline Deployment
+# ML Production Pipeline with Python SDK v2 &amp; MLFlow in Azure
+
 
 This repository contains code for deploying a machine learning pipeline in Azure Machine Learning. The pipeline consists of several components for data preparation and model training, and it ultimately deploys the trained model as an online endpoint.
 
@@ -26,7 +26,8 @@ Before using this code, make sure you have the following prerequisites in place:
 ## Project Structure
 The project is organized as follows:
 
-- `main.py`: The main script that defines and deploys the Azure Machine Learning pipeline.
+- `e2e-ml-pipeline_cc_defaults.ipynb`: The main script is in the attched jupyter notebook that defines and deploys the Azure Machine Learning   
+   pipeline.
 - `components/`: Directory containing the component scripts and YAML definitions for data preparation and model training.
 - `dependencies/`: Directory containing the Conda environment YAML file.
 - `deploy/`: Directory containing a sample request JSON for testing the deployed endpoint.
@@ -46,11 +47,9 @@ The model training component is defined in `train.py`. It trains a machine learn
 The code deploys the trained model as an online endpoint. It creates an online endpoint with a unique name and deploys the latest version of the registered model.
 
 ### Testing the Endpoint
-You can test the deployed online endpoint using the provided sample request JSON in the `deploy/` directory. The script in `main.py` demonstrates how to invoke the endpoint with sample data.
+You can test the deployed online endpoint using the provided sample request JSON in the `deploy/` directory. The script in `e2e-ml-pipeline_cc_defaults.ipynb` demonstrates how to invoke the endpoint with sample data.
 
 ## Clean Up
 After you've finished using the resources, don't forget to clean up:
 
 - You can uncomment and use the `ml_client.online_endpoints.begin_delete()` method to delete the online endpoint when it's no longer needed.
-
-Feel free to customize this README to provide additional information and context specific to your project. This documentation should help users understand how to use and maintain your Azure Machine Learning pipeline deployment.
